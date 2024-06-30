@@ -1,0 +1,23 @@
+{
+  "name": "scenario_manager_bot",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --env-file=.env app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kotyabuchi/ScenarioMangerBot.git"
+  },
+  "author": "kotyabuchi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kotyabuchi/ScenarioMangerBot/issues"
+  },
+  "homepage": "https://github.com/kotyabuchi/ScenarioMangerBot#readme",
+  "description": "",
+  "dependencies": {
+    "discord.js": "^14.15.3"
+  }
+}
