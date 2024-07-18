@@ -40,6 +40,8 @@ const client = new Client({
   ],
   partials: [Partials.Channel],
 });
+
+// コマンドの内容登録
 const commands: Collection<string, Commnad> = new Collection();
 
 const foldersPath = path.join(__dirname, "commands");
@@ -72,6 +74,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
   const command = commands.get(interaction.commandName);
+  console.log(interaction.options.getSubcommand(false));
 
   if (!command) {
     console.error(

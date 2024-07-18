@@ -45,11 +45,13 @@ export function RegisterCommand() {
       const data = await rest.put(
         Routes.applicationGuildCommands(APPLICATION_ID, SERVER_ID),
         {
-          body: commands.map((command) => command.data.toJSON()),
+          body: commands,
         }
       );
 
       console.log(`Successfully reloaded ${data} application (/) commands.`);
+      // if (typeof data === "object" && data != null) {
+      // }
     } catch (error) {
       // And of course, make sure you catch and log any errors!
       console.error(error);
